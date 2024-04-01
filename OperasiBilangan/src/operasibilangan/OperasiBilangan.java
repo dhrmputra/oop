@@ -5,6 +5,8 @@
  */
 package operasibilangan;
 
+import java.util.Scanner;
+
 /**
  *
  * @author INSTIKI
@@ -17,8 +19,17 @@ public class OperasiBilangan {
     public static void main(String[] args) {
         // TODO code application logic here
         float b1, b2, jml, krg, bagi, kali;
+        /*
         b1 = 5;
         b2 = 3;
+         */
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Masukan Bilangan 1 : ");
+        b1 = sc.nextFloat();
+
+        System.out.print("Masukan Bilangan 2: ");
+        b2 = sc.nextFloat();
+
         jml = b1 + b2;
         krg = b1 - b2;
         bagi = b1 / b2;
