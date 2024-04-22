@@ -17,13 +17,17 @@ public class OperasiPerulangan {
     public static void main(String[] args) {
         // TODO code application logic here
         int x,b1,b2,jml,krg;
+        String car;
         for(x=1;x<10;x++){
             System.out.println("Nilai X adalah "+ x);
         }
-            
-        Scanner key = new Scanner(System.in);
-        System.out.println("Bilangan 1 = ");
-        b1 = key.nextLine();
+        
+        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+        System.out.println(cars[2]);
+        
+         int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+        myNumbers[1][2] = 9;
+    System.out.println(myNumbers[1][2]);
     }
     
 }
