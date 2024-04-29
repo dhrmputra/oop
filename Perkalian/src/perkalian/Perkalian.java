@@ -30,8 +30,9 @@ public class Perkalian {
         System.out.print("Akhir : ");
         b2 = sc.nextInt();
 
-        for (i = b1; i <= b2; i++) { {
-                    hasil = x * i;
+        for (i = b1; i <= b2; i++) {
+            {
+                hasil = x * i;
                 System.out.println(x + " X " + i + " = " + hasil);
             }
         }
