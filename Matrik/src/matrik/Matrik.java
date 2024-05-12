@@ -13,30 +13,30 @@ import java.util.Scanner;
 public class Matrik {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+        
         // Input matriks pertama
-        System.out.println("Masukkan elemen-elemen matriks pertama (2x2):");
+        System.out.println("Masukkan nilai matriks pertama :");
         int[][] matrix1 = inputMatrix(scanner);
 
         // Input matriks kedua
-        System.out.println("Masukkan elemen-elemen matriks kedua (2x2):");
+        System.out.println("Masukkan nilai matriks kedua :");
         int[][] matrix2 = inputMatrix(scanner);
 
         // Penjumlahan matriks
-        int[][] sumMatrix = addMatrices(matrix1, matrix2);
+        int[][] tambah = tambahMatrix(matrix1, matrix2);
 
         // Perkalian matriks
-        int[][] productMatrix = multiplyMatrices(matrix1, matrix2);
+        int[][] kali = kaliMatrix(matrix1, matrix2);
 
         // Menampilkan hasil
-        System.out.println("Matriks Pertama:");
+        System.out.println("Matriks Pertama :");
         printMatrix(matrix1);
-        System.out.println("Matriks Kedua:");
+        System.out.println("Matriks Kedua :");
         printMatrix(matrix2);
-        System.out.println("Penjumlahan Matriks:");
-        printMatrix(sumMatrix);
-        System.out.println("Perkalian Matriks:");
-        printMatrix(productMatrix);
+        System.out.println("Penjumlahan Matriks :");
+        printMatrix(tambah);
+        System.out.println("Perkalian Matriks :");
+        printMatrix(kali);
     }
 
     // Method untuk mengambil input matriks dari pengguna
@@ -51,28 +51,28 @@ public class Matrik {
     }
 
     // Method untuk menambahkan dua matriks
-    public static int[][] addMatrices(int[][] matrix1, int[][] matrix2) {
-        int[][] sumMatrix = new int[2][2];
+    public static int[][] tambahMatrix(int[][] matrix1, int[][] matrix2) {
+        int[][] tambah = new int[2][2];
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
-                sumMatrix[i][j] = matrix1[i][j] + matrix2[i][j];
+                tambah[i][j] = matrix1[i][j] + matrix2[i][j];
             }
         }
-        return sumMatrix;
+        return tambah;
     }
 
     // Method untuk mengalikan dua matriks
-    public static int[][] multiplyMatrices(int[][] matrix1, int[][] matrix2) {
-        int[][] productMatrix = new int[2][2];
+    public static int[][] kaliMatrix(int[][] matrix1, int[][] matrix2) {
+        int[][] kali = new int[2][2];
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
-                productMatrix[i][j] = 0;
+                kali[i][j] = 0;
                 for (int k = 0; k < 2; k++) {
-                    productMatrix[i][j] += matrix1[i][k] * matrix2[k][j];
+                    kali[i][j] += matrix1[i][k] * matrix2[k][j];
                 }
             }
         }
-        return productMatrix;
+        return kali;
     }
 
     // Method untuk mencetak matriks
